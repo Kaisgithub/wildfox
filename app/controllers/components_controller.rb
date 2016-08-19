@@ -4,7 +4,7 @@ class ComponentsController < ApplicationController
   def index
     @components = Component.all
     respond_to do |format|
-      format.html {render json: @components}
+      format.html
       format.json {render json: @components}
     end
   end
@@ -12,6 +12,7 @@ class ComponentsController < ApplicationController
   def show
     if params[:describe].blank?
       @component = Component.find_by(id: params[:id])
+      #@component = Component.where('id = ?', params[:id])
       render json: @component
     else
       @component = Component.find_by(describe: params[:describe])

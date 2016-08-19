@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Rails wildfox: test" uuid="9b948f17-3333-4f85-95d7-7c38dac22b4f">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails wildfox: production" uuid="bf066918-ba4e-45ae-a459-0b223e8ac59b">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails wildfox: development" uuid="a4bb499f-1cac-46b4-bb86-4cdfb9b44d87">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

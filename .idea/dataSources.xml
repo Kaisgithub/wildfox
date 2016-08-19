@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1208126182">
+    <data-source source="LOCAL" name="Rails wildfox: test" uuid="9b948f17-3333-4f85-95d7-7c38dac22b4f">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/wildfox_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails wildfox: production" uuid="bf066918-ba4e-45ae-a459-0b223e8ac59b">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:wildfox_production</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails wildfox: development" uuid="a4bb499f-1cac-46b4-bb86-4cdfb9b44d87">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/wildfox_development</jdbc-url>
+    </data-source>
+  </component>
+</project>
