@@ -15,7 +15,8 @@ class ComponentsController < ApplicationController
       #@component = Component.where('id = ?', params[:id])
       render json: @component
     else
-      @component = Component.find_by(describe: params[:describe])
+      #@component = Component.find_by(describe: params[:describe])
+      @component = Component.where('describe = ?', params[:describe])
       render json: @component
     end
   end
