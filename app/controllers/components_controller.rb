@@ -49,6 +49,7 @@ class ComponentsController < ApplicationController
     end
   end
 
+
   private
   def components_params
     the_params = params.require(:component).permit(:describe, :struct)
