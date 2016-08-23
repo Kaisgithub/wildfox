@@ -10,5 +10,6 @@
 #
 
 class Component < ActiveRecord::Base
+  validates :describe, presence: true, uniqueness: true
 
 end

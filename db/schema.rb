@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20160817023310) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "components", force: :cascade do |t|
+  create_table "components", force: true do |t|
     t.string   "describe"
     t.string   "struct"
     t.datetime "created_at", null: false
