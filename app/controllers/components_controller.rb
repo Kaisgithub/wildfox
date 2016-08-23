@@ -12,7 +12,6 @@ class ComponentsController < ApplicationController
   def show
     if params[:describe].blank?
       @component = Component.find_by(id: params[:id])
-      #@component = Component.where('id = ?', params[:id])
       render json: @component
     else
       #@component = Component.find_by(describe: params[:describe])
@@ -27,7 +26,7 @@ class ComponentsController < ApplicationController
       if @component.save
         format.json {render json: @component, status: :created}
       else
-        format.json {render json: @component, status: :unprocessable_entity}
+        format.json {render json: @component.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -37,7 +36,7 @@ class ComponentsController < ApplicationController
     if @component.update(components_params)
       render json: @component, status: :ok
     else
-      render json: @component, status: :not_found
+      render json: @component.errors, status: :not_found
     end
   end
 
