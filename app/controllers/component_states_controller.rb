@@ -1,0 +1,3 @@
+class ComponentStatesController < ApplicationController
+
+end

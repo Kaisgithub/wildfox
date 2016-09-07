@@ -1,12 +1,20 @@
 Rails.application.routes.draw do
 
   #components
-  get 'components' => 'components#index'
-  get 'components/:id' => 'components#show'
-  get 'components/describe/:describe' => 'components#show'
-  post 'components' => 'components#create'
-  delete 'components/:id' => 'components#delete'
-  put 'components/:id' => 'components#update'
+  # get 'components' => 'components#index'
+  # get 'components/:id' => 'components#show'
+  # get 'components/describe/:describe' => 'components#show'
+  # post 'components' => 'components#create'
+  # delete 'components/:id' => 'components#delete'
+  # put 'components/:id' => 'components#update'
+
+  resources :components do
+    collection do
+      get 'describe/:describe' => 'components#show'
+    end
+
+
+  end
 
   #switch
 

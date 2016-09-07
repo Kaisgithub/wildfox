@@ -11,32 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160906064539) do
+ActiveRecord::Schema.define(version: 20160907053447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "components", force: :cascade do |t|
-    t.string   "describe"
-    t.string   "struct"
+  create_table "component_states", force: :cascade do |t|
+    t.integer  "component_type_id"
+    t.string   "state"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "component_types", force: :cascade do |t|
+    t.string   "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "lights", force: :cascade do |t|
-    t.integer  "component_id"
+  create_table "components", force: :cascade do |t|
+    t.integer  "component_type_id"
+    t.integer  "component_state_id"
     t.string   "describe"
-    t.string   "state"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "switches", force: :cascade do |t|
-    t.integer  "component_id"
-    t.string   "describe"
-    t.string   "state"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
 end

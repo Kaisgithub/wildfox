@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SwitchesControllerTest < ActionController::TestCase
+class ComponentStatesControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end
