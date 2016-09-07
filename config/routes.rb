@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   delete 'components/:id' => 'components#delete'
   put 'components/:id' => 'components#update'
 
-  #I'm a test
+  #switch
+
+
+  #light
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

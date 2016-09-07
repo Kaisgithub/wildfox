@@ -518,6 +518,22 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="puma (vbundled(3.6.0), /home/zhangkai/workspace-ruby/wildfox/vendor/bundle/ruby/2.1.0/gems/puma-3.6.0) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/puma-3.6.0/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/puma-3.6.0/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/puma-3.6.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/puma-3.6.0/tools" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/puma-3.6.0/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/puma-3.6.0/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/puma-3.6.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/puma-3.6.0/tools" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="rack (vbundled(1.6.4), /home/zhangkai/workspace-ruby/wildfox/vendor/bundle/ruby/2.1.0/gems/rack-1.6.4) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/rack-1.6.4/bin" />

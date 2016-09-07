@@ -10,6 +10,8 @@
 #
 
 class Component < ActiveRecord::Base
+  has_many :switches
+  has_many :lights
   validates :describe, presence: true, uniqueness: true
 
 end
