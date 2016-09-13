@@ -3,7 +3,7 @@ class CreateComponentStates < ActiveRecord::Migration
     create_table :component_states do |t|
       t.belongs_to :component_type
 
-      t.string :state
+      t.string :state_name
       t.timestamps null: false
     end
   end

@@ -12,16 +12,19 @@ Rails.application.routes.draw do
     collection do
       get 'describe/:describe' => 'components#show'
     end
-
-
   end
 
-  #switch
+  resources :component_types do
+    resources :component_states
+  end
+
+  resources :component_states
 
 
-  #light
+  #component_types
 
 
+  #component_states
 
 
   # The priority is based upon order of creation: first created -> highest priority.

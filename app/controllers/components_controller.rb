@@ -1,5 +1,4 @@
 class ComponentsController < ApplicationController
-  protect_from_forgery with: :null_session
 
   def index
     @components = Component.all
@@ -45,13 +44,13 @@ class ComponentsController < ApplicationController
     if @component.destroy
       render json: @component, status: :ok
     else
-      render json: @component, status: :not_found
+      render json: @component.errors, status: :not_found
     end
   end
 
 
   private
   def components_params
-    the_params = params.require(:component).permit(:describe, :struct)
+    params.require(:component).permit(:describe, :component_type_id, :component_state_id)
   end
 end

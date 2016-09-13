@@ -11,4 +11,5 @@
 class ComponentType < ActiveRecord::Base
   has_many :components
   has_many :component_states
+  validates :typename, presence: true, uniqueness: true
 end

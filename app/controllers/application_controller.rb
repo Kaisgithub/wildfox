@@ -10,4 +10,6 @@ class ApplicationController < ActionController::Base
     response.headers['Access-Control-Allow-Headers'] = 'origin, content-type, X-Requested-With'
     response.headers['Access-Control-Max-Age'] = '1800'
   end
+
+  protect_from_forgery with: :null_session
 end

@@ -18,13 +18,13 @@ ActiveRecord::Schema.define(version: 20160907053447) do
 
   create_table "component_states", force: :cascade do |t|
     t.integer  "component_type_id"
-    t.string   "state"
+    t.string   "state_name"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
 
   create_table "component_types", force: :cascade do |t|
-    t.string   "type"
+    t.string   "typename"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
