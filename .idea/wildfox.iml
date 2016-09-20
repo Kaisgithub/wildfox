@@ -119,7 +119,7 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bundle" />
     </content>
-    <orderEntry type="jdk" jdkName="ruby-2.1.0-p0" jdkType="RUBY_SDK" />
+    <orderEntry type="jdk" jdkName="RVM: ruby-2.1.0 [global]" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="actionmailer (vbundled(4.2.4), /home/zhangkai/workspace-ruby/wildfox/vendor/bundle/ruby/2.1.0/gems/actionmailer-4.2.4) [path][gem]">
@@ -192,6 +192,22 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="amq-protocol (vbundled(2.0.1), /home/zhangkai/workspace-ruby/wildfox/vendor/bundle/ruby/2.1.0/gems/amq-protocol-2.0.1) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/amq-protocol-2.0.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/amq-protocol-2.0.1/codegen" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/amq-protocol-2.0.1/profiling" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/amq-protocol-2.0.1/benchmarks" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/amq-protocol-2.0.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/amq-protocol-2.0.1/codegen" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/amq-protocol-2.0.1/profiling" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/amq-protocol-2.0.1/benchmarks" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="annotate (vbundled(2.6.5), /home/zhangkai/workspace-ruby/wildfox/vendor/bundle/ruby/2.1.0/gems/annotate-2.6.5) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/annotate-2.6.5/bin" />
@@ -234,6 +250,24 @@
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/builder-3.2.2/lib" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/builder-3.2.2/rakelib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="bunny (vbundled(2.5.1), /home/zhangkai/workspace-ruby/wildfox/vendor/bundle/ruby/2.1.0/gems/bunny-2.5.1) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/bunny-2.5.1/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/bunny-2.5.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/bunny-2.5.1/docker" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/bunny-2.5.1/profiling" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/bunny-2.5.1/benchmarks" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/bunny-2.5.1/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/bunny-2.5.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/bunny-2.5.1/docker" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/bunny-2.5.1/profiling" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/bunny-2.5.1/benchmarks" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -805,7 +839,7 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.12.5, ruby-2.1.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.12.5, RVM: ruby-2.1.0 [global]) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

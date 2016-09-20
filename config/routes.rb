@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   resources :component_states
 
+  resources :listener
 
   #component_types
 
