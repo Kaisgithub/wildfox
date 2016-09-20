@@ -37,5 +37,6 @@ class ComponentStatesController < ApplicationController
   private
   def component_states_params
     params.require(:component_state).permit(:state_name, :component_type_id)
+    # params.require(:component_state).permit(:state_name)
   end
 end

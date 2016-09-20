@@ -45,6 +45,9 @@
     // Fetch output panel
     output = document.getElementById("output");
 
+    client.heartbeat.outgoing=0;
+    client.heartbeat.incoming=0;
+
     // Connect
     client.connect(
         mq_username,
