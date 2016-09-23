@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :messages
+  resources :users
   #components
   # get 'components' => 'components#index'
   # get 'components/:id' => 'components#show'
@@ -22,10 +24,12 @@ Rails.application.routes.draw do
 
   resources :listener
 
-  #component_types
-
-
-  #component_states
+  resources :kinds do
+    resources :modes
+    collection do
+      get ':describe' => 'kinds#show'
+    end
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -152,6 +152,20 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="active_model_serializers (vbundled(0.10.2), /home/zhangkai/workspace-ruby/wildfox/vendor/bundle/ruby/2.1.0/bundler/gems/active_model_serializers-0606b06abd78) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/bundler/gems/active_model_serializers-0606b06abd78/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/bundler/gems/active_model_serializers-0606b06abd78/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/bundler/gems/active_model_serializers-0606b06abd78/.github" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/bundler/gems/active_model_serializers-0606b06abd78/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/bundler/gems/active_model_serializers-0606b06abd78/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/bundler/gems/active_model_serializers-0606b06abd78/.github" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="activejob (vbundled(4.2.4), /home/zhangkai/workspace-ruby/wildfox/vendor/bundle/ruby/2.1.0/gems/activejob-4.2.4) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/activejob-4.2.4/lib" />
@@ -430,6 +444,16 @@
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/json-1.8.3/tests" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/json-1.8.3/tools" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/json-1.8.3/diagrams" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jsonapi (vbundled(0.1.1.beta2), /home/zhangkai/workspace-ruby/wildfox/vendor/bundle/ruby/2.1.0/gems/jsonapi-0.1.1.beta2) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/jsonapi-0.1.1.beta2/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/jsonapi-0.1.1.beta2/lib" />
         </SOURCES>
       </library>
     </orderEntry>

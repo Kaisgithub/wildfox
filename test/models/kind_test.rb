@@ -1,16 +1,16 @@
 # == Schema Information
 #
-# Table name: component_types
+# Table name: kinds
 #
 #  id         :integer          not null, primary key
-#  typename   :string
+#  kindname   :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class ComponentTypeTest < ActiveSupport::TestCase
+class KindTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
