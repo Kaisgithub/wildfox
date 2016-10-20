@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rails-api/active_model_serializers.git
-  revision: 0606b06abd78ea92942343a14f72b792d8afea56
+  revision: 2145540795d21b9362f0381e9f4e57dadbfa51e3
   specs:
     active_model_serializers (0.10.2)
       actionpack (>= 4.1, < 6)
@@ -80,6 +80,11 @@ GEM
     json (1.8.3)
     jsonapi (0.1.1.beta2)
       json (~> 1.8)
+    jsonb_accessor (0.3.3)
+      activerecord (>= 4.2.1)
+      pg (>= 0.18.1)
+    jsonpath (0.5.8)
+      multi_json
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -171,6 +176,8 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  jsonb_accessor
+  jsonpath
   pg
   puma
   rails (= 4.2.4)

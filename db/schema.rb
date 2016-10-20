@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160922065717) do
+ActiveRecord::Schema.define(version: 20160928061608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,30 @@ ActiveRecord::Schema.define(version: 20160922065717) do
     t.datetime "updated_at",         null: false
   end
 
+  create_table "contents", force: :cascade do |t|
+    t.integer  "package_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genre_styles", force: :cascade do |t|
+    t.integer  "genre_id"
+    t.string   "height"
+    t.string   "width"
+    t.string   "x"
+    t.string   "y"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.integer  "content_id"
+    t.string   "number"
+    t.string   "typename"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "kinds", force: :cascade do |t|
     t.string   "kindname"
     t.datetime "created_at", null: false
@@ -59,6 +83,29 @@ ActiveRecord::Schema.define(version: 20160922065717) do
   end
 
   add_index "modes", ["kind_id"], name: "index_modes_on_kind_id", using: :btree
+
+  create_table "package_styles", force: :cascade do |t|
+    t.integer  "package_id"
+    t.string   "height"
+    t.string   "width"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "packages", force: :cascade do |t|
+    t.string   "category"
+    t.string   "desc"
+    t.string   "number"
+    t.string   "typename"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "parts", force: :cascade do |t|
+    t.jsonb    "data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"

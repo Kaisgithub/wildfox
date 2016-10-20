@@ -32,6 +32,19 @@ Rails.application.routes.draw do
   end
 
 
+  resources :packages
+  resources :contents
+  resources :genres
+  resources :genre_styles
+  resources :rules
+
+  resources :dest
+  resources :srcs
+  resources :package_styles
+
+  resources :parts
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
