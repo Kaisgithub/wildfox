@@ -1,50 +1,21 @@
 Rails.application.routes.draw do
 
-  resources :messages
-  resources :users
-  #components
-  # get 'components' => 'components#index'
-  # get 'components/:id' => 'components#show'
-  # get 'components/describe/:describe' => 'components#show'
-  # post 'components' => 'components#create'
-  # delete 'components/:id' => 'components#delete'
-  # put 'components/:id' => 'components#update'
+  get 'components' => 'components#index'
+  get 'components/get/:jsonpath' => 'components#show'
+  get 'components/delete/:jsonpath' => 'components#delete'
+  post 'components/add' => 'components#add'
+  post 'components/alert' => 'components#alert'
+  post 'components/create' => 'components#create'
 
-  resources :components do
-    collection do
-      get 'describe/:describe' => 'components#show'
-    end
-  end
+  get 'parts' => 'parts#index'
+  get 'parts/get/:jsonpath' => 'parts#show'
+  get 'parts/delete/:jsonpath' => 'parts#delete'
+  post 'parts/add' => 'parts#add'
+  post 'parts/alert' => 'parts#alert'
+  post 'parts/create' => 'parts#create'
 
-  resources :component_types do
-    resources :component_states
-  end
-
-  resources :component_states
-
-  resources :listener
-
-  resources :kinds do
-    resources :modes
-    collection do
-      get ':describe' => 'kinds#show'
-    end
-  end
-
-
-  resources :packages
-  resources :contents
-  resources :genres
-  resources :genre_styles
-  resources :rules
-
-  resources :dest
-  resources :srcs
-  resources :package_styles
-
-  resources :parts
-
-
+  get 'listener/index' => 'listener/index'
+  get 'listener/show' => 'listener/show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

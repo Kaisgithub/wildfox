@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ComponentTypesControllerTest < ActionController::TestCase
+class PartsControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -1,2 +1,0 @@
-module ComponentStatesHelper
-end

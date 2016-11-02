@@ -152,20 +152,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="active_model_serializers (vbundled(0.10.2), /home/zhangkai/workspace-ruby/wildfox/vendor/bundle/ruby/2.1.0/bundler/gems/active_model_serializers-2145540795d2) [path][gem]">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/bundler/gems/active_model_serializers-2145540795d2/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/bundler/gems/active_model_serializers-2145540795d2/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/bundler/gems/active_model_serializers-2145540795d2/.github" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/bundler/gems/active_model_serializers-2145540795d2/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/bundler/gems/active_model_serializers-2145540795d2/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/bundler/gems/active_model_serializers-2145540795d2/.github" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="activejob (vbundled(4.2.4), /home/zhangkai/workspace-ruby/wildfox/vendor/bundle/ruby/2.1.0/gems/activejob-4.2.4) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/activejob-4.2.4/lib" />
@@ -448,16 +434,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="jsonapi (vbundled(0.1.1.beta2), /home/zhangkai/workspace-ruby/wildfox/vendor/bundle/ruby/2.1.0/gems/jsonapi-0.1.1.beta2) [path][gem]">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/jsonapi-0.1.1.beta2/lib" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/jsonapi-0.1.1.beta2/lib" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="jsonb_accessor (vbundled(0.3.3), /home/zhangkai/workspace-ruby/wildfox/vendor/bundle/ruby/2.1.0/gems/jsonb_accessor-0.3.3) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/jsonb_accessor-0.3.3/db" />
@@ -632,6 +608,16 @@
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/rack-1.6.4/lib" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/rack-1.6.4/contrib" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/rack-1.6.4/example" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="rack-cors (vbundled(0.4.0), /home/zhangkai/workspace-ruby/wildfox/vendor/bundle/ruby/2.1.0/gems/rack-cors-0.4.0) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/rack-cors-0.4.0/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/rack-cors-0.4.0/lib" />
         </SOURCES>
       </library>
     </orderEntry>

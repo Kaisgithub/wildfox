@@ -14,8 +14,8 @@
       // removed when the client disconnects. They will receive
       // all messages published in the "amq.topic" exchange, with the
       // given routing key, in this case "mymessages"
-      // mq_queue    = "/topic/mymessages";
-      mq_queue    = "mymessages";
+       mq_queue    = "/topic/components.#";
+      //mq_queue    = "mymessages";
 
   // This is where we print incomoing messages
   var output;

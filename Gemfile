@@ -39,7 +39,9 @@ gem 'bunny'
 
 gem 'jsonpath'
 
-gem "active_model_serializers", github: "rails-api/active_model_serializers"
+gem 'rack-cors'
+
+# gem "active_model_serializers", github: "rails-api/active_model_serializers"
 
 gem "jsonb_accessor"
 
