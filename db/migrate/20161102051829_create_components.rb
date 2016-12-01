@@ -3,7 +3,7 @@ class CreateComponents < ActiveRecord::Migration
     create_table :components do |t|
       t.jsonb :components
 
-      t.timestamps null: false
+      # t.timestamps null: false
     end
   end
 end

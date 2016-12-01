@@ -1,54 +1,54 @@
-class ComponentsController < ApplicationController
+class DevicesController < ApplicationController
   def index
-    @components = Component.all
-    render json: @components
+    @devices = Device.all
+    render json: @devices
   end
 
   def show
-    @component = Component.first
+    @device = Device.first
     jsonpath = xtoy(params[:jsonpath])
     path = JsonPath.new(jsonpath)
-    value = path.on(@component.as_json)[0]
+    value = path.on(@device.as_json)[0]
     obj = {'jsonvalue' => value}
     render json: obj
   end
 
   def create
-    @component = Component.new()
-    @component.components = params[:components]
-    if @component.save!
-      render json: @component, status: :created
+    @device = Device.new()
+    @device.devices = params[:devices]
+    if @device.save!
+      render json: @device, status: :created
     else
-      render json: @component.errors, status: :unprocessable_entity
+      render json: @device.errors, status: :unprocessable_entity
     end
   end
 
   def add
-    @component = Component.first
-    jsonpathd = components_params['components']['jsonpath']
-    jsonvalue = components_params['components']['value']
+    @device = Device.first
+    jsonpathd = devices_params['devices']['jsonpath']
+    jsonvalue = devices_params['devices']['value']
     jsonpath = dtoy(jsonpathd)
     path = JsonPath.new(jsonpath)
-    value = path.on(@component.as_json)[0]
+    value = path.on(@device.as_json)[0]
     newjsonvalue = value.merge jsonvalue
-    @componentnew = JsonPath.for(@component.as_json).gsub(jsonpath) {|v| newjsonvalue }.to_hash
-    @component.update(@componentnew)
+    @devicenew = JsonPath.for(@device.as_json).gsub(jsonpath) {|v| newjsonvalue }.to_hash
+    @device.update(@devicenew)
     render json: newjsonvalue
   end
 
   def alert
-    @component = Component.first
-    jsonpathd = components_params['components']['jsonpath']
-    jsonvalue = components_params['components']['value']
+    @device = Device.first
+    jsonpathd = devices_params['devices']['jsonpath']
+    jsonvalue = devices_params['devices']['value']
     jsonpath = dtoy(jsonpathd)
     path = JsonPath.new(jsonpath)
-    if path.on(@component.as_json)[0] == jsonvalue
+    if path.on(@device.as_json)[0] == jsonvalue
       puts 'equal'
-      render json: @component
+      render json: @device
     else
       puts 'different'
-      @componentnew = JsonPath.for(@component.as_json).gsub(jsonpath) {|v| jsonvalue }.to_hash
-      @component.update(@componentnew)
+      @devicenew = JsonPath.for(@device.as_json).gsub(jsonpath) {|v| jsonvalue }.to_hash
+      @device.update(@devicenew)
 
       obj = {jsonpathd => jsonvalue}
       objs = jtom(obj.to_s)
@@ -69,16 +69,16 @@ class ComponentsController < ApplicationController
       x.publish(objs, :routing_key => jsonpathd)
       conn.close
 
-      render json: @component
+      render json: @device
     end
   end
 
   def delete
-    @component = Component.first
+    @device = Device.first
     jsonpath = xtoy(params[:jsonpath])
-    @componentnew = JsonPath.for(@component.as_json).delete(jsonpath).to_hash
-    @component.update(@componentnew)
-    render json: @component
+    @devicenew = JsonPath.for(@device.as_json).delete(jsonpath).to_hash
+    @device.update(@devicenew)
+    render json: @device
   end
 
   private
@@ -105,9 +105,9 @@ class ComponentsController < ApplicationController
     return s
   end
 
-  def components_params
-    params.permit(:components).tap do |whitelisted|
-      whitelisted[:components] = params[:components]
+  def devices_params
+    params.permit(:devices).tap do |whitelisted|
+      whitelisted[:devices] = params[:devices]
     end
   end
 

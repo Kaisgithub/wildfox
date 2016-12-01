@@ -11,21 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161102051829) do
+ActiveRecord::Schema.define(version: 20161121022300) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "components", force: :cascade do |t|
-    t.jsonb    "components"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.jsonb "components"
   end
 
-  create_table "parts", force: :cascade do |t|
-    t.jsonb    "data"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "devices", force: :cascade do |t|
+    t.jsonb "devices"
+  end
+
+  create_table "runtimes", force: :cascade do |t|
+    t.string "describe"
+    t.jsonb  "runtimes"
   end
 
 end

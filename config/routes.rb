@@ -7,15 +7,26 @@ Rails.application.routes.draw do
   post 'components/alert' => 'components#alert'
   post 'components/create' => 'components#create'
 
-  get 'parts' => 'parts#index'
-  get 'parts/get/:jsonpath' => 'parts#show'
-  get 'parts/delete/:jsonpath' => 'parts#delete'
-  post 'parts/add' => 'parts#add'
-  post 'parts/alert' => 'parts#alert'
-  post 'parts/create' => 'parts#create'
+  get 'runtimes' => 'runtimes#index'
+  get 'runtimes/get/:describe/:jsonpath' => 'runtimes#show'
+  get 'runtimes/get/:describe' => 'runtimes#show'
+  get 'runtimes/delete/:describe/:jsonpath' => 'runtimes#delete'
+  get 'runtimes/delete/:describe' => 'runtimes#delete'
+  post 'runtimes/add/:describe' => 'runtimes#add'
+  post 'runtimes/alert/:describe' => 'runtimes#alert'
+  post 'runtimes/create' => 'runtimes#create'
+
+  get 'devices' => 'devices#index'
+  get 'devices/get/:jsonpath' => 'devices#show'
+  get 'devices/delete/:jsonpath' => 'devices#delete'
+  post 'devices/add' => 'devices#add'
+  post 'devices/alert' => 'devices#alert'
+  post 'devices/create' => 'devices#create'
 
   get 'listener/index' => 'listener/index'
   get 'listener/show' => 'listener/show'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
