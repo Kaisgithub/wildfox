@@ -25,8 +25,8 @@ class DevicesController < ApplicationController
 
   def add
     @device = Device.first
-    jsonpathd = devices_params['devices']['jsonpath']
-    jsonvalue = devices_params['devices']['value']
+    jsonpathd = params['jsonpath']
+    jsonvalue = params['value']
     jsonpath = dtoy(jsonpathd)
     path = JsonPath.new(jsonpath)
     value = path.on(@device.as_json)[0]
@@ -38,8 +38,8 @@ class DevicesController < ApplicationController
 
   def alert
     @device = Device.first
-    jsonpathd = devices_params['devices']['jsonpath']
-    jsonvalue = devices_params['devices']['value']
+    jsonpathd = params['jsonpath']
+    jsonvalue = params['value']
     jsonpath = dtoy(jsonpathd)
     path = JsonPath.new(jsonpath)
     if path.on(@device.as_json)[0] == jsonvalue
@@ -81,34 +81,5 @@ class DevicesController < ApplicationController
     render json: @device
   end
 
-  private
-  def xtoy(s)
-    objs = "['" + s + "']"
-    while (objs["_"])
-      objs["_"] = "']['"
-    end
-    return objs
-  end
-
-  def dtoy(s)
-    objs = "['" + s + "']"
-    while (objs["."])
-      objs["."] = "']['"
-    end
-    return objs
-  end
-
-  def jtom(s)
-    while (s["\"=>"])
-      s["\"=>"] = "\":"
-    end
-    return s
-  end
-
-  def devices_params
-    params.permit(:devices).tap do |whitelisted|
-      whitelisted[:devices] = params[:devices]
-    end
-  end
 
 end

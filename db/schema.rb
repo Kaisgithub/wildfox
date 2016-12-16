@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161121022300) do
+ActiveRecord::Schema.define(version: 20161212014512) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,13 +20,48 @@ ActiveRecord::Schema.define(version: 20161121022300) do
     t.jsonb "components"
   end
 
+  create_table "control_data", force: :cascade do |t|
+    t.integer "data_nodes_id"
+    t.integer "data"
+  end
+
+  add_index "control_data", ["data_nodes_id"], name: "index_control_data_on_data_nodes_id", using: :btree
+
+  create_table "data_nodes", force: :cascade do |t|
+    t.integer "data_sources_id"
+    t.string  "name"
+    t.json    "describe"
+  end
+
+  add_index "data_nodes", ["data_sources_id"], name: "index_data_nodes_on_data_sources_id", using: :btree
+
+  create_table "data_sources", force: :cascade do |t|
+    t.string "name"
+    t.string "genre"
+    t.string "state"
+    t.json   "describe"
+  end
+
   create_table "devices", force: :cascade do |t|
     t.jsonb "devices"
+  end
+
+  create_table "history_data", force: :cascade do |t|
+    t.string  "describe"
+    t.integer "data"
+    t.string  "create_time"
   end
 
   create_table "runtimes", force: :cascade do |t|
     t.string "describe"
     t.jsonb  "runtimes"
   end
+
+  create_table "state_data", force: :cascade do |t|
+    t.integer "data_nodes_id"
+    t.integer "data"
+  end
+
+  add_index "state_data", ["data_nodes_id"], name: "index_state_data_on_data_nodes_id", using: :btree
 
 end

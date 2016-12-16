@@ -26,6 +26,23 @@ Rails.application.routes.draw do
   get 'listener/index' => 'listener/index'
   get 'listener/show' => 'listener/show'
 
+  get 'data_sources' => 'data_sources#index'
+  post 'data_sources/create' => 'data_sources#create'
+  post 'data_sources/alert/:name' => 'data_sources#alert'
+
+  get 'data_nodes' => 'data_nodes#index'
+  post 'data_nodes/create' => 'data_nodes#create'
+  post 'data_nodes/alert/:name' => 'data_nodes#alert'
+
+  get 'state_data/create/:data_sources_id' => 'state_data#create'
+  get 'state_data' => 'state_data#index'
+  get 'state_data/show/:data_nodes_id' => 'state_data#show'
+
+  get 'control_data' => 'control_data#index'
+  get 'control_data/create/:data_nodes_id/:data' => 'control_data#create'
+
+  get 'history_data' => 'history_data#index'
+  get 'history_data/:describe/:number' => 'history_data#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

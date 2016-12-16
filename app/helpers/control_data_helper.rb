@@ -1,0 +1,2 @@
+module ControlDataHelper
+end

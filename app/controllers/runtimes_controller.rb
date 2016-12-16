@@ -38,8 +38,8 @@ class RuntimesController < ApplicationController
 
   def add
     @runtime = Runtime.find_by_describe(params[:describe])
-    jsonpathd = runtimes_params['runtimes']['jsonpath']
-    jsonvalue = runtimes_params['runtimes']['value']
+    jsonpathd = params[:jsonpath]
+    jsonvalue = params[:value]
     jsonpath = dtoy(jsonpathd)
     path = JsonPath.new(jsonpath)
     value = path.on(@runtime.as_json)[0]
@@ -50,9 +50,17 @@ class RuntimesController < ApplicationController
   end
 
   def alert
+    if !(params[:create_time].nil?)
+      @history_data = HistoryDatum.new()
+      @history_data.describe = params[:name]
+      @history_data.data = params[:value]
+      @history_data.create_time = params[:create_time]
+      @history_data.save
+    end
+
     @runtime = Runtime.find_by_describe(params[:describe])
-    jsonpathd = runtimes_params['runtimes']['jsonpath']
-    jsonvalue = runtimes_params['runtimes']['value']
+    jsonpathd = params[:jsonpath]
+    jsonvalue = params[:value]
     jsonpath = dtoy(jsonpathd)
     path = JsonPath.new(jsonpath)
     if path.on(@runtime.as_json)[0] == jsonvalue
@@ -102,33 +110,4 @@ class RuntimesController < ApplicationController
     end
   end
 
-  private
-  def xtoy(s)
-    objs = "['" + s + "']"
-    while (objs["_"])
-      objs["_"] = "']['"
-    end
-    return objs
-  end
-
-  def dtoy(s)
-    objs = "['" + s + "']"
-    while (objs["."])
-      objs["."] = "']['"
-    end
-    return objs
-  end
-
-  def jtom(s)
-    while (s["\"=>"])
-      s["\"=>"] = "\":"
-    end
-    return s
-  end
-
-  def runtimes_params
-    params.permit(:runtimes).tap do |whitelisted|
-      whitelisted[:runtimes] = params[:runtimes]
-    end
-  end
 end

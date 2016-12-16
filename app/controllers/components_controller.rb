@@ -25,8 +25,9 @@ class ComponentsController < ApplicationController
 
   def add
     @component = Component.first
-    jsonpathd = components_params['components']['jsonpath']
-    jsonvalue = components_params['components']['value']
+    # jsonpathd = components_params['components']['jsonpath']
+    jsonpathd = params['jsonpath']
+    jsonvalue = params['value']
     jsonpath = dtoy(jsonpathd)
     path = JsonPath.new(jsonpath)
     value = path.on(@component.as_json)[0]
@@ -38,8 +39,8 @@ class ComponentsController < ApplicationController
 
   def alert
     @component = Component.first
-    jsonpathd = components_params['components']['jsonpath']
-    jsonvalue = components_params['components']['value']
+    jsonpathd = params['jsonpath']
+    jsonvalue = params['value']
     jsonpath = dtoy(jsonpathd)
     path = JsonPath.new(jsonpath)
     if path.on(@component.as_json)[0] == jsonvalue
@@ -81,34 +82,10 @@ class ComponentsController < ApplicationController
     render json: @component
   end
 
-  private
-  def xtoy(s)
-    objs = "['" + s + "']"
-    while (objs["_"])
-      objs["_"] = "']['"
-    end
-    return objs
-  end
-
-  def dtoy(s)
-    objs = "['" + s + "']"
-    while (objs["."])
-      objs["."] = "']['"
-    end
-    return objs
-  end
-
-  def jtom(s)
-    while (s["\"=>"])
-      s["\"=>"] = "\":"
-    end
-    return s
-  end
-
-  def components_params
-    params.permit(:components).tap do |whitelisted|
-      whitelisted[:components] = params[:components]
-    end
-  end
+  # def components_params
+  #   params.permit(:components).tap do |whitelisted|
+  #     whitelisted[:components] = params[:components]
+  #   end
+  # end
 
 end

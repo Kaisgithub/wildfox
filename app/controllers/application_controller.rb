@@ -14,4 +14,28 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
 
   skip_before_filter  :verify_authenticity_token       # Can't verify CSRF token authenticity
+
+  def xtoy(s)
+    objs = "['" + s + "']"
+    while (objs["_"])
+      objs["_"] = "']['"
+    end
+    return objs
+  end
+
+  def dtoy(s)
+    objs = "['" + s + "']"
+    while (objs["."])
+      objs["."] = "']['"
+    end
+    return objs
+  end
+
+  def jtom(s)
+    while (s["\"=>"])
+      s["\"=>"] = "\":"
+    end
+    return s
+  end
+
 end
